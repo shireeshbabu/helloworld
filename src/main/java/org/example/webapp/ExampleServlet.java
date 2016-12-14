@@ -22,6 +22,6 @@ public class ExampleServlet extends HttpServlet {
 			log.trace(String.format("doGet(%s, %s)", req, resp));
 		resp.setContentType("text/plain");
 		resp.getWriter().write(req.getPathInfo());
-		resp.getWriter().write("hello world");
+		resp.getWriter().write("my world");
 	}
 }
