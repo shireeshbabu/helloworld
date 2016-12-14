@@ -7,7 +7,7 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<build>
+	<compile>
 		<finalName>example</finalName>
 		<plugins>
 			<plugin>
@@ -29,7 +29,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-	</build>
+	</compile>
 	<dependencies>
 		<dependency>
 			<groupId>javax.servlet</groupId>
