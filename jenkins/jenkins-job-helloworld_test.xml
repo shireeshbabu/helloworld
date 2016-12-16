@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash
+
+#get the response from helloworld page
+url_response=$(curl http://localhost:8181/helloworld/)
+echo &quot;${url_response}&quot;
+if [[ &quot;${url_response}&quot; == *&quot;hello world&quot;* ]]; then
+   echo &quot;Test Successful&quot;
+else
+   echo &quot;Test Failed&quot;
+   exit 1
+fi</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
