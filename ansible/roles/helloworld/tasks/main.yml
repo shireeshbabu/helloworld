@@ -2,5 +2,5 @@
     # This playbook contains common plays that will be run on all nodes.
     
     -   name: Install tomcat
-        yum: name=tomcat state=present
+        yum: name=tomcat state=present enabled=yes
         tags: tomcat 
