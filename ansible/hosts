@@ -1,0 +1,2 @@
+[helloworld]
+10.0.2.15 ansible_connection=ssh ansible_ssh_user=root ansible_ssh_pass=root123 ansible_sudo_pass=root123
