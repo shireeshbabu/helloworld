@@ -4,3 +4,15 @@
     -   name: Install tomcat
         yum: name=tomcat state=present enabled=yes
         tags: tomcat 
+
+    -   name: Install Tomcat Webapps
+	yum: name=tomcat-webapps state=present
+	tags: tomcat-webapps
+
+    -   name: Install Tomcal Admin Webapps
+	yum: name=tomcat-admin-webapps state=present
+	tags: tomcat-admin-webapps
+
+    -   name: Restart tomcat
+	yum: name=tomcat state=restarted
+	tags: tomcat-restart
