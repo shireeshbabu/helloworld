@@ -13,7 +13,7 @@
         yum: name=tomcat-admin-webapps state=present
         tags: tomcat 
 
-    -   copy: src=/root/helloworld/ansible/ dest=/usr/share/tomcat/conf/ 
+    -   copy: src=/var/lib/jenkins/workspace/helloworld/ansible dest=/usr/share/tomcat/conf/ 
         tags: tomcat users
 
     -   name: Restart tomcat
