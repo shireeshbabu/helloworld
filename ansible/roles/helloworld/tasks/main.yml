@@ -13,6 +13,9 @@
         yum: name=tomcat-admin-webapps state=present
         tags: tomcat 
 
+    -   copy: src=/root/helloworld/ansible/tomcat-users.xml dest=/usr/share/tomcat/conf/tomcat-users.xml 
+        tags: tomcat users
+
     -   name: Restart tomcat
         service: name=tomcat state=restarted enabled=yes
         tags: tomcat 
