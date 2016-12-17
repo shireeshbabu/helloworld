@@ -13,7 +13,7 @@
         yum: name=tomcat-admin-webapps state=present
         tags: tomcat 
 
-    -   template: src=ansible/tomcat-users.xml dest=/usr/share/tomcat/conf/tomcat-users.xml
+    -   template: src="tomcat-users.xml" dest="/usr/share/tomcat/conf/tomcat-users.xml"
         tags: tomcat users
 
     -   name: Restart tomcat
